@@ -38,7 +38,7 @@ if ($annee_scolaire == 'ING1') {
 }
 
 $stage = $identite_stage->fetch();
-$type_stage = strtoupper($stage['libelle']);
+$type_stage = $stage['libelle'];
 $id_tuteur_interne = $stage['id_tuteur_interne'];
 $id_tuteur_externe = $stage['id_tuteur_externe'];
 
@@ -51,8 +51,8 @@ $identite_tuteur_externe = $pdo->query("SELECT * FROM tuteur WHERE id_tuteur = $
 $tuteur_externe = $identite_tuteur_externe->fetch();
 
 
-$nom_tuteur_interne = strtoupper($tuteur_interne['nom'] . " " . $tuteur_interne['prenom']);
-$nom_tuteur_externe = strtoupper($tuteur_externe['nom'] . " " . $tuteur_externe['prenom']);
+$nom_tuteur_interne = $tuteur_interne['nom'] . " " . $tuteur_interne['prenom'];
+$nom_tuteur_externe = $tuteur_externe['nom'] . " " . $tuteur_externe['prenom'];
 
 
 $id_entreprise_tuteur_externe = $tuteur_externe['id_entreprise'];
@@ -62,7 +62,7 @@ $id_entreprise_tuteur_externe = $tuteur_externe['id_entreprise'];
 $identite_campus = $pdo->query("SELECT * FROM campus WHERE id_campus = $id_campus");
 $campus = $identite_campus->fetch();
 $nom_campus = strtoupper($campus['nom']);
-$filiere = strtoupper($campus['filiere']);
+$filiere = $campus['filiere'];
 
 // entreprise accueil
 $identite_ent_accueil = $pdo->query("SELECT * FROM entreprise WHERE id_entreprise = $id_entreprise_tuteur_externe");
