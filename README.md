@@ -1,5 +1,5 @@
 # Internship'Co
-<p align="center"><img src="logo-internshipco.png" width="150px" height="150px"></p>
+<p align="center"><img src="logo-internshipco.png" width="295px" height="118px"></p>
 
 ## About Internship'Co
 Web application designed to give proper informations about interns in our school. It is intended for the administration 
